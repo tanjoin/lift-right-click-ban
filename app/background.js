@@ -1,0 +1,1 @@
+(()=>{"use strict";new(function(){function n(){chrome.action.onClicked.addListener((function(t){var e=t.id;e&&chrome.scripting.executeScript({target:{tabId:e},func:n.allow})}))}return n.allow=function(){document.addEventListener("contextmenu",(function(n){n.stopPropagation()}),!0)},n}())})();
