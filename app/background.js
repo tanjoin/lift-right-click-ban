@@ -1,1 +1,21 @@
-(()=>{"use strict";new(function(){function n(){chrome.action.onClicked.addListener((function(t){var e=t.id;e&&chrome.scripting.executeScript({target:{tabId:e},func:n.allow})}))}return n.allow=function(){document.addEventListener("contextmenu",(function(n){n.stopPropagation()}),!0)},n}())})();
+"use strict";
+class Background {
+    constructor() {
+        chrome.action.onClicked.addListener((tab) => {
+            const tabId = tab.id;
+            if (tabId) {
+                chrome.scripting.executeScript({
+                    target: { tabId },
+                    func: Background.allow
+                });
+            }
+        });
+    }
+    static allow() {
+        document.addEventListener('contextmenu', (event) => {
+            event.stopPropagation();
+        }, true);
+    }
+}
+new Background();
+//# sourceMappingURL=background.js.map

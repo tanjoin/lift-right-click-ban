@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "右クリック禁止を解除",
   "description": "右クリックが禁止されているページで右クリックができるようにする",
-  "version": "0.0.3",
+  "version": "2026.10.29",
   "permissions": [
     "tabs",
     "activeTab",
